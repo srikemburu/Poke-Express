@@ -22,7 +22,7 @@ const pokemon = require('../models/pokemon');
                               return (
                                   <li>
                                       <h1>The Pokemon name is {' '}    
-                                        <a href={poke.img}>
+                                        <a href={`/pokemon/${i}`}>
                                           {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
                                     </a>{' '}
                                     </h1>         
@@ -30,9 +30,6 @@ const pokemon = require('../models/pokemon');
                               );
                           })}
                       </ul>
-                      {/* <nav>
-                        <a href="/fruits/new">Create a New Fruit</a>
-                      </nav> */}
                   </div>
           );
       }
