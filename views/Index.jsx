@@ -23,8 +23,7 @@ const pokemon = require('../models/pokemon');
                                   <li>
                                       <h1>The Pokemon name is {' '}    
                                         <a href={poke.img}>
-                                          {poke.name}
-                                       
+                                          {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
                                     </a>{' '}
                                     </h1>         
                                   </li>
