@@ -19,10 +19,14 @@ app.use(express.urlencoded({extended:false}));
 app.get('/pokemon/new', (req, res) => {
     res.render('New');
 });
- 
-app.get('/pokemon', function(req, res){
-    res.render('Index', { pokemon: pokemon });
+
+app.get('/pokemon/:id', function(req, res){
+    res.send(req.params.id);
 });      
+ 
+// app.get('/pokemon', function(req, res){
+//     res.render('Index', { pokemon: pokemon });
+// });      
 
 // app.get('/', function(req,res){
 //     res.send(' <h1>Welcome to the Pokemon App!</h1>')
