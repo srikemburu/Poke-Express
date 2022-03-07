@@ -5,10 +5,6 @@ const myStyle = {
     backgroundColor: 'grey',     
   };
 
-  // const anchorStyle = {
-  //   style : 'text-transform:capitalize',
-  // }
-
 const pokemon = require('../models/pokemon');
 
     class Index extends React.Component {
@@ -16,12 +12,15 @@ const pokemon = require('../models/pokemon');
           const { poke } = this.props;
           return (
                   <div style={myStyle}>
-                      <h1>See All The Pokemon!</h1>
+                      <h1>Gotta Catch 'Em All!</h1>
                       <ul>
                           {pokemon.map((poke, i) => {
                               return (
                                   <li>
-                                    <h1>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h1>           
+                                      <a href={`/pokemon/${i}`}> 
+                                          <h2>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h2>
+                                      </a>
+                                    {/* <h1>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h1>            */}
                                   </li>
                               );
                           })}

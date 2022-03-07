@@ -36,7 +36,7 @@ const pokemon = require('../models/pokemon');
                       </ul>
                       <nav>
                         <a href="/backToIndex">
-                            <button style={buttonStyle}>Back</button>
+                            <button style={buttonStyle}>Show List</button>
                             <br></br>
                             <br></br>
                         </a>    
