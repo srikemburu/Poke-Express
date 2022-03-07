@@ -1,13 +1,13 @@
 const React = require('react');
 
 const myStyle = {
-    color: 'black',
+    color: 'brown',
     backgroundColor: 'grey',     
   };
 
-  const anchorStyle = {
-    style : 'text-transform:capitalize',
-  }
+  // const anchorStyle = {
+  //   style : 'text-transform:capitalize',
+  // }
 
 const pokemon = require('../models/pokemon');
 
@@ -21,11 +21,7 @@ const pokemon = require('../models/pokemon');
                           {pokemon.map((poke, i) => {
                               return (
                                   <li>
-                                      <h1>The Pokemon name is {' '}    
-                                        <a href={`/pokemon/${i}`}>
-                                          {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
-                                    </a>{' '}
-                                    </h1>         
+                                    <h1>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</h1>           
                                   </li>
                               );
                           })}
